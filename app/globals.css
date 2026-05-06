@@ -1,69 +1,125 @@
-@import "tailwindcss";
+@import "../node_modules/tailwindcss/index.css";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #0b444a;
-  /* Varsha Teal */
-  --secondary: #072f33;
-  /* Deep Teal */
-  --accent: #d9e9e7;
-  /* Light Teal */
-  --warm: #f5f5f7;
-  /* Light Grey */
+  --foreground: #333333;
+  --primary: #0d2b36;
+  --amber: #c8922a;
+  --muted: #666666;
+  --neutral: #f5f5f5;
+  --soft: #f9f9f9;
+  --font-heading: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-warm: var(--warm);
-  --font-heading: var(--font-lustria);
-  --font-body: var(--font-dm-sans);
+  --color-amber: var(--amber);
+  --color-muted: var(--muted);
+  --color-neutral: var(--neutral);
+  --color-soft: var(--soft);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+  font-size: 16px;
 }
 
-@keyframes fadeInUp {
+a,
+button {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
+    transform 180ms ease, box-shadow 180ms ease;
+}
+
+.btn-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--amber);
+  color: white;
+  padding: 0.875rem 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.btn-amber:hover {
+  background: #b17d1e;
+  transform: translateY(-1px);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: white;
+  padding: 0.875rem 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.btn-outline-white:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.btn-outline-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  padding: 0.875rem 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.btn-outline-amber:hover {
+  background: var(--amber);
+  color: white;
+}
+
+@keyframes marquee {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(0);
   }
-
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%);
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+.animate-marquee {
+  animation: marquee 24s linear infinite;
 }
 
-@keyframes scrollDown {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(12px);
-    opacity: 0;
-  }
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.animate-scroll-down {
-  animation: scrollDown 2s infinite;
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
 }

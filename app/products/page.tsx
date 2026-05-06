@@ -1,175 +1,71 @@
-import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
-import { categories, lifeSciencesCategories } from '@/lib/products';
-import { ArrowRight } from 'lucide-react';
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import InnerHero from "@/components/InnerHero";
+import { productCategories } from "@/lib/site-data";
 
 export default function ProductsPage() {
+    const [activeId, setActiveId] = useState(productCategories[0].id);
+    const activeCategory =
+        productCategories.find((category) => category.id === activeId) || productCategories[0];
+    const ActiveIcon = activeCategory.icon;
+
     return (
-        <div className="bg-white min-h-screen">
-            {/* Design-forward Header */}
-            <div className="bg-primary text-white text-center pt-24 pb-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <ScrollReveal width="100%">
-                        <h1 className="font-heading text-4xl md:text-6xl font-bold tracking-tight">
-                            Our Products
-                        </h1>
-                    </ScrollReveal>
-                </div>
-            </div>
-
-            {/* Content Sections */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-20">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center -mt-9 pt-0">
-                    <a
-                        href="#diagnostics"
-                        className="px-8 py-3 rounded-full border-2 border-primary bg-primary text-white font-bold text-sm tracking-wide uppercase text-center hover:bg-secondary hover:border-secondary transition-all shadow-lg"
-                    >
-                        Diagnostics
-                    </a>
-                    <a
-                        href="#life-sciences"
-                        className="px-8 py-3 rounded-full border-2 border-primary bg-white text-primary font-bold text-sm tracking-wide uppercase text-center hover:bg-primary hover:text-white transition-all shadow-lg"
-                    >
-                        Life Sciences
-                    </a>
-                </div>
-
-                {/* Packaging Solutions */}
-                <section id="diagnostics">
-                    <ScrollReveal width="100%">
-                        <div className="mb-10 text-center md:text-left">
-                            <h2 className="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">
-                                Packaging Solutions for Diagnostics
-                            </h2>
-                            <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-                                Plastic packaging solutions engineered to safely store, protect, and dispense sensitive diagnostic reagents and chemicals.
-                            </p>
-                        </div>
-                    </ScrollReveal>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {categories.filter(c => c.section === 'packaging').map((category, index) => (
-                            <ScrollReveal key={category.id} delay={index * 0.1} className="h-full">
-                                <Link href={`/products/${category.id}`} className="group block h-full">
-                                    <div className="h-full flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out">
-                                        <div className="h-64 bg-warm/50 flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                                            {category.image ? (
-                                                <img
-                                                    src={category.image}
-                                                    alt={category.title}
-                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                                />
-                                            ) : (
-                                                <>
-                                                    <div className="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors duration-500" />
-                                                    <span className="font-heading text-4xl text-secondary/20 group-hover:scale-110 transition-transform duration-700">
-                                                        {category.title.charAt(0)}
-                                                    </span>
-                                                </>
-                                            )}
-                                        </div>
-                                        <div className="p-8 flex-grow flex flex-col justify-between">
-                                            <div>
-                                                <h3 className="font-heading text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
-                                                    {category.title}
-                                                </h3>
-                                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                                                    {category.description}
-                                                </p>
-                                            </div>
-                                            <span className="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all">
-                                                View Products <ArrowRight className="w-4 h-4" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </ScrollReveal>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Life Sciences */}
-                <section id="life-sciences">
-                    <ScrollReveal width="100%">
-                        <div className="mb-10 text-center md:text-left">
-                            <h2 className="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">
-                                Life Sciences
-                            </h2>
-                            <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-                                Reliable, high-performance labware consumables designed to support routine and advanced laboratory workflows.
-                            </p>
-                        </div>
-                    </ScrollReveal>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {lifeSciencesCategories.map((category, index) => (
-                            <ScrollReveal key={category.id} delay={index * 0.1} className="h-full">
-                                <Link href={category.href} className="group block h-full">
-                                    <div className="h-full flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out">
-                                        <div className="h-64 bg-warm/50 flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                                            {category.image ? (
-                                                <img
-                                                    src={category.image}
-                                                    alt={category.title}
-                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                                />
-                                            ) : (
-                                                <>
-                                                    <div className="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors duration-500" />
-                                                    <span className="font-heading text-4xl text-secondary/20 group-hover:scale-110 transition-transform duration-700">
-                                                        {category.title.charAt(0)}
-                                                    </span>
-                                                </>
-                                            )}
-                                        </div>
-                                        <div className="p-8 flex-grow flex flex-col justify-between">
-                                            <div>
-                                                <h3 className="font-heading text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
-                                                    {category.title}
-                                                </h3>
-                                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                                                    {category.description}
-                                                </p>
-                                            </div>
-                                            <span className="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all">
-                                                View Products <ArrowRight className="w-4 h-4" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </ScrollReveal>
-                        ))}
-                    </div>
-                </section>
-
-                {/* OEM CTA Section */}
-                <section className="mt-24">
-                    <ScrollReveal width="100%">
-                        <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 md:p-16 text-center text-white shadow-xl">
-                            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-                                Need a Custom or OEM Solution?
-                            </h2>
-                            <p className="text-xl text-accent/90 max-w-3xl mx-auto mb-10 leading-relaxed">
-                                Contact our team to discuss product specifications, private labeling, or custom manufacturing requirements.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                                <Link
-                                    href="/oem-solutions"
-                                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        <>
+            <InnerHero title="Our Products" />
+            <section className="py-16 md:py-24">
+                <div className="mx-auto grid max-w-screen-xl gap-8 px-4 sm:px-6 lg:grid-cols-[300px_1fr] lg:px-8">
+                    <aside className="h-fit rounded-lg border border-black/10 bg-white p-4 shadow-sm lg:sticky lg:top-28">
+                        <h2 className="px-3 pb-3 text-sm font-black uppercase tracking-[0.18em] text-primary">
+                            Categories
+                        </h2>
+                        <div className="space-y-2">
+                            {productCategories.map((category) => (
+                                <button
+                                    key={category.id}
+                                    type="button"
+                                    onClick={() => setActiveId(category.id)}
+                                    className={`w-full rounded-md px-3 py-3 text-left font-bold ${activeId === category.id ? "bg-primary text-white" : "text-primary hover:bg-neutral"}`}
                                 >
-                                    Explore OEM Solutions <ArrowRight className="w-5 h-5" />
-                                </Link>
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                                >
-                                    Contact Us <ArrowRight className="w-5 h-5" />
-                                </Link>
-                            </div>
+                                    {category.shortTitle}
+                                </button>
+                            ))}
                         </div>
-                    </ScrollReveal>
-                </section>
-            </div>
-        </div>
+                    </aside>
+
+                    <div>
+                        <div className="mb-8 rounded-lg bg-soft p-6">
+                            <ActiveIcon className="h-10 w-10 text-amber" />
+                            <h2 className="mt-4 text-3xl font-bold text-primary">{activeCategory.title}</h2>
+                            <p className="mt-3 text-muted">{activeCategory.description}</p>
+                        </div>
+                        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                            {activeCategory.models.map((model) => (
+                                <div key={model} className="rounded-lg border border-black/10 bg-white p-5 shadow-sm">
+                                    <div className="mb-5 flex aspect-[4/3] items-center justify-center rounded-lg bg-neutral">
+                                        <ActiveIcon className="h-14 w-14 text-primary" />
+                                    </div>
+                                    <h3 className="min-h-14 text-lg font-bold text-primary">{model}</h3>
+                                    <Link
+                                        href={`/contact?product=${encodeURIComponent(model)}`}
+                                        className="btn-amber mt-5 w-full justify-center"
+                                    >
+                                        Enquire Now
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-12 rounded-lg bg-primary p-8 text-center text-white">
+                            <h3 className="text-2xl font-bold">Can&apos;t find what you need?</h3>
+                            <p className="mt-3 text-white/75">Contact us for custom requirements.</p>
+                            <Link href="/contact" className="btn-amber mt-6">
+                                Contact Us
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }
