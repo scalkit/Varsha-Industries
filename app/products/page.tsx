@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import InnerHero from "@/components/InnerHero";
 import { productCategories } from "@/lib/site-data";
 
@@ -43,8 +44,14 @@ export default function ProductsPage() {
                         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                             {activeCategory.models.map((model) => (
                                 <div key={model} className="flex min-w-0 flex-col rounded-lg border border-black/10 bg-white p-5 shadow-sm">
-                                    <div className="mb-5 flex aspect-[4/3] items-center justify-center rounded-lg bg-neutral">
-                                        <ActiveIcon className="h-14 w-14 text-primary" />
+                                    <div className="relative mb-5 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-neutral">
+                                        <Image
+                                            src={activeCategory.image}
+                                            alt={`${model} machine`}
+                                            fill
+                                            className="object-cover transition duration-500 hover:scale-105"
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                                        />
                                     </div>
                                     <h3 className="flex-grow text-base font-bold leading-7 text-primary sm:text-lg">{model}</h3>
                                     <Link

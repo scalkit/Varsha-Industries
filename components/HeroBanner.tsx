@@ -22,10 +22,10 @@ export default function HeroBanner() {
                     className={`absolute inset-0 transition-opacity duration-700 ${index === active ? "opacity-100" : "opacity-0"}`}
                 >
                     <div
-                        className="absolute inset-0 w-full bg-cover bg-center opacity-25 sm:opacity-35 md:left-auto md:w-3/5"
+                        className="absolute inset-0 w-full bg-cover bg-center opacity-70 sm:opacity-80 md:left-auto md:w-3/5"
                         style={{ backgroundImage: `url(${slide.image})` }}
                     />
-                    <div className="absolute inset-0 bg-primary/75" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/72 to-primary/24" />
                 </div>
             ))}
             <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] w-full max-w-screen-xl items-center overflow-hidden px-3 py-14 sm:min-h-[calc(100svh-96px)] sm:px-6 sm:py-20 lg:px-8">

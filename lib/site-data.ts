@@ -43,7 +43,7 @@ export const heroSlides = [
         description:
             "Robust oil expeller machines engineered for reliable edible and non-edible oil processing.",
         image:
-            "https://images.unsplash.com/photo-1581093458791-9d42cc7c01c8?auto=format&fit=crop&w=1600&q=80",
+            "https://cdn2.zohoecommerce.com/product-images/expeller.jpg/2271192000001473078/600x600?storefront_domain=www.devimachines.com",
     },
     {
         eyebrow: "FILTER PRESS SOLUTIONS",
@@ -51,7 +51,7 @@ export const heroSlides = [
         description:
             "Filter press machines and cloth solutions for consistent, efficient oil filtration.",
         image:
-            "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=80",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kalolis.jpg/960px-Kalolis.jpg",
     },
     {
         eyebrow: "SPARES & SUPPORT",
@@ -80,7 +80,7 @@ export const productCategories = [
             "4-bolt to 9-bolt configurations, single and double gear variants for all capacities",
         icon: Settings,
         image:
-            "https://images.unsplash.com/photo-1581093458791-9d42cc7c01c8?auto=format&fit=crop&w=900&q=80",
+            "https://cdn2.zohoecommerce.com/product-images/expeller.jpg/2271192000001473078/600x600?storefront_domain=www.devimachines.com",
         models: [
             "4 BOLT SINGLE GEAR 18 X 3.5",
             "4 BOLT SINGLE GEAR 18 X 4",
@@ -110,7 +110,7 @@ export const productCategories = [
         description: "Available from 7.5 HP to 20 HP for cold oil extraction",
         icon: Gauge,
         image:
-            "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80",
+            "https://cdn2.zohoecommerce.com/product-images/expeller.jpg/2271192000001473078/600x600?storefront_domain=www.devimachines.com",
         models: ["7.5 HP", "10 HP", "12.5 HP", "15 HP", "20 HP"],
     },
     {
@@ -121,7 +121,7 @@ export const productCategories = [
             "Sizes from 8x8 to 30x30, suitable for all scales of oil filtration",
         icon: Filter,
         image:
-            "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/M.W._Watermark_Plate_and_Frame_Filter_Press.jpg/960px-M.W._Watermark_Plate_and_Frame_Filter_Press.jpg",
         models: [
             "8 X 8 X 8",
             "10 X 10 X 10",
@@ -143,7 +143,7 @@ export const productCategories = [
             "Cotton, Polyester, Polypropylene and mixed options in all filter press sizes",
         icon: Leaf,
         image:
-            "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=900&q=80",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Diemme_Filtration_Filter_Press_cloth_pack.jpg/1024px-Diemme_Filtration_Filter_Press_cloth_pack.jpg",
         models: [
             "Cotton 850 GSM",
             "Cotton 950 GSM",
@@ -157,8 +157,8 @@ export const productCategories = [
 
 export const clients = [
     {
-        name: "MDH",
-        logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MDH_logo_web-200x140.jpg",
+        name: "MDH Masala",
+        logo: "https://mdhspices.com/wp-content/themes/mdhspices/img/logo.png",
         initials: "MDH",
     },
     {

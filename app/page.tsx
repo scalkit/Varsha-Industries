@@ -56,6 +56,7 @@ export default function Home() {
                                 title={category.title}
                                 description={category.description}
                                 icon={category.icon}
+                                image={category.image}
                                 href="/products"
                             />
                         ))}

@@ -8,7 +8,6 @@ import { Cog, Menu, X } from "lucide-react";
 const navLinks = [
     ["Home", "/"],
     ["About Us", "/about"],
-    ["Resources", "/resources"],
     ["Products", "/products"],
     ["Insights", "/insights"],
     ["Contact Us", "/contact"],
