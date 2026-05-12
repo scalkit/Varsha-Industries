@@ -6,8 +6,8 @@ import { clients } from "@/lib/site-data";
 export default function ClientLogoStrip() {
     const marqueeClients = [...clients, ...clients];
     return (
-        <div className="client-marquee overflow-hidden py-2">
-            <div className="flex w-max animate-marquee gap-5 pr-5">
+        <div className="client-marquee overflow-hidden py-5">
+            <div className="flex w-max animate-marquee items-center gap-20 pr-20 sm:gap-24 sm:pr-24 lg:gap-28 lg:pr-28">
                 {marqueeClients.map((client, index) => (
                     <ClientLogoCard key={`${client.name}-${index}`} client={client} />
                 ))}
@@ -25,28 +25,21 @@ function ClientLogoCard({
     const showLogo = Boolean(client.logo) && !failed;
 
     return (
-        <div className="group flex min-h-24 w-64 shrink-0 items-center gap-4 rounded-lg border border-black/10 bg-white px-5 py-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-amber/40 hover:shadow-xl sm:w-72">
-            <div className="flex h-14 w-20 shrink-0 items-center justify-center rounded-md bg-neutral p-2 ring-1 ring-black/5">
-                {showLogo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                        src={client.logo}
-                        alt={`${client.name} logo`}
-                        className="max-h-10 max-w-full object-contain"
-                        loading="lazy"
-                        onError={() => setFailed(true)}
-                    />
-                ) : (
-                    <span className="text-sm font-black tracking-wide text-amber">
-                        {client.initials}
-                    </span>
-                )}
-            </div>
-            <div className="min-w-0">
-                <h3 className="line-clamp-2 text-base font-black leading-snug text-primary">
+        <div className="group flex min-h-16 min-w-36 shrink-0 items-center justify-center opacity-90 transition duration-300 hover:-translate-y-1 hover:opacity-100 sm:min-w-44">
+            {showLogo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="max-h-12 max-w-36 object-contain sm:max-w-44"
+                    loading="lazy"
+                    onError={() => setFailed(true)}
+                />
+            ) : (
+                <span className="text-center text-2xl font-black tracking-tight text-white sm:text-3xl">
                     {client.name}
-                </h3>
-            </div>
+                </span>
+            )}
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
 import ClientLogoStrip from "@/components/ClientLogoStrip";
 import ContactCTA from "@/components/ContactCTA";
@@ -16,19 +17,20 @@ export default function Home() {
             <HeroBanner />
 
             <section className="py-16 md:py-24">
-                <div className="mx-auto grid max-w-screen-xl items-center gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-8">
-                    <div className="md:order-1">
+                <div className="mx-auto grid max-w-screen-xl items-stretch gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-8">
+                    <div className="flex flex-col md:order-1">
                         <SectionHeader eyebrow="WHO WE ARE" title="About Varsha Industry" centered={false} />
                         <div className="mt-8 space-y-5 leading-8 text-muted">
                             {aboutParagraphs.map((paragraph) => (
                                 <p key={paragraph}>{paragraph}</p>
                             ))}
                         </div>
-                        <Link href="/about" className="btn-outline-amber mt-8">
+                        <Link href="/about" className="group mt-8 inline-flex w-fit items-center gap-2 self-start rounded-lg border border-amber px-5 py-3 font-extrabold leading-none text-amber transition duration-300 hover:-translate-y-1 hover:bg-amber hover:text-white hover:shadow-lg">
                             Learn More About Us
+                            <ArrowRight className="h-4 w-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                         </Link>
                     </div>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl md:order-2">
+                    <div className="relative min-h-80 overflow-hidden rounded-lg shadow-xl md:order-2 md:h-full md:min-h-0">
                         <Image
                             src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
                             alt="Industrial manufacturing facility with machinery"
@@ -69,9 +71,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-neutral py-16 md:py-24">
-                <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                    <SectionHeader eyebrow="OUR CLIENTS" title="Trusted By Industry Leaders" />
+            <section className="overflow-hidden bg-primary py-16 text-white md:py-24">
+                <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-6 lg:px-8">
+                    <p className="text-sm font-bold text-white/55">Trusted by industry leaders</p>
                     <div className="mt-12">
                         <ClientLogoStrip />
                     </div>
@@ -80,7 +82,9 @@ export default function Home() {
 
             <section className="py-16 md:py-24">
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                    <SectionHeader eyebrow="FROM OUR BLOG" title="Insights" />
+                    <div className="border-l-4 border-amber/35 pl-5">
+                        <h2 className="text-2xl font-black text-primary sm:text-3xl">Latest Insights</h2>
+                    </div>
                     <div className="mt-12 grid gap-7 md:grid-cols-3">
                         {blogs.slice(0, 3).map((post) => (
                             <BlogCard key={post.slug} post={post} />
