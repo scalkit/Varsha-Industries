@@ -135,6 +135,14 @@ button {
   animation: marquee 24s linear infinite;
 }
 
+.client-marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.client-marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
 .line-clamp-2,
 .line-clamp-3 {
   display: -webkit-box;

@@ -156,12 +156,36 @@ export const productCategories = [
 ];
 
 export const clients = [
-    "MDH",
-    "DRDO",
-    "Ambuja Cement Foundation",
-    "KMPC Technology Limited",
-    "Maatruveda (Roseate Foods)",
-    "AOS Products Pvt Ltd",
+    {
+        name: "MDH",
+        logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MDH_logo_web-200x140.jpg",
+        initials: "MDH",
+    },
+    {
+        name: "DRDO",
+        logo: "https://www.drdo.gov.in/drdo/sites/default/files/inline-images/new_drdo_logo.png",
+        initials: "DRDO",
+    },
+    {
+        name: "Ambuja Cement Foundation",
+        logo: "https://companieslogo.com/img/orig/AMBUJACEM.NS-bc1a2948.png?download=true&t=1745681919",
+        initials: "ACF",
+    },
+    {
+        name: "KPMC Technology Limited",
+        logo: "",
+        initials: "KPMC",
+    },
+    {
+        name: "Maatruveda (Roseate Foods)",
+        logo: "",
+        initials: "MV",
+    },
+    {
+        name: "AOS Products Pvt Ltd",
+        logo: "https://www.aosproduct.com/images/aos-logo.png",
+        initials: "AOS",
+    },
 ];
 
 export const blogs = [
