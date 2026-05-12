@@ -53,7 +53,18 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-12 border-t border-white/15 pt-6 text-center text-sm text-white/60">
-                    © 2025 Varsha Industry. All rights reserved.
+                    <p>© 2025 Varsha Industry. All rights reserved.</p>
+                    <p className="mt-2">
+                        Designed &amp; Developed by{" "}
+                        <a
+                            href="https://outlierlabs.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold text-white/75 transition hover:text-amber"
+                        >
+                            Outlier Labs
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
