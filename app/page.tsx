@@ -98,10 +98,15 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-soft py-16 md:py-24">
-                <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                    <SectionHeader eyebrow="GOT QUESTIONS?" title="Frequently Asked Questions" />
-                    <div className="mt-12">
+            <section className="relative overflow-hidden bg-soft py-16 md:py-24">
+                <div className="mx-auto max-w-5xl border-x border-primary/10 bg-background/55 px-4 py-8 sm:px-8 md:py-12 lg:px-16">
+                    <span className="inline-flex rounded-full bg-neutral px-6 py-2 text-sm font-bold text-muted">
+                        FAQs
+                    </span>
+                    <h2 className="mt-8 max-w-4xl text-3xl font-bold leading-tight text-primary md:text-4xl">
+                        Everything You Need to <span className="font-serif italic font-medium">Know</span>
+                    </h2>
+                    <div className="mt-10">
                         <FAQAccordion />
                     </div>
                 </div>
