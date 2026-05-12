@@ -23,16 +23,19 @@ export default function Navbar() {
 
     return (
         <nav className="fixed inset-x-0 top-0 z-50 bg-primary text-white shadow-lg">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-20 items-center justify-between">
-                    <Link href="/" className="flex items-center gap-3 font-black tracking-wide">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-amber/60 text-amber">
+            <div className="mx-auto w-full max-w-screen-xl px-3 sm:px-6 lg:px-8">
+                <div className="flex h-20 min-w-0 items-center justify-between gap-2 sm:gap-4">
+                    <Link href="/" className="flex min-w-0 items-center gap-2 font-black tracking-wide sm:gap-3">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-amber/60 text-amber">
                             <Cog className="h-5 w-5" />
                         </span>
-                        <span className="text-lg md:text-xl">VARSHA INDUSTRY</span>
+                        <span className="flex min-w-0 flex-col text-[13px] leading-none sm:text-base md:text-lg">
+                            <span className="truncate">VARSHA</span>
+                            <span className="truncate">INDUSTRY</span>
+                        </span>
                     </Link>
 
-                    <div className="hidden items-center gap-7 lg:flex">
+                    <div className="hidden items-center gap-5 lg:flex xl:gap-7">
                         {navLinks.map(([label, href]) => (
                             <Link
                                 key={href}
@@ -42,14 +45,11 @@ export default function Navbar() {
                                 {label}
                             </Link>
                         ))}
-                        <Link href="/contact" className="btn-amber px-5 py-3">
-                            Get a Quote
-                        </Link>
                     </div>
 
                     <button
                         type="button"
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 lg:hidden"
+                        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/20 lg:hidden"
                         onClick={() => setIsOpen((value) => !value)}
                         aria-label="Toggle navigation"
                     >
@@ -71,13 +71,6 @@ export default function Navbar() {
                                 {label}
                             </Link>
                         ))}
-                        <Link
-                            href="/contact"
-                            onClick={() => setIsOpen(false)}
-                            className="btn-amber mt-2 justify-center"
-                        >
-                            Get a Quote
-                        </Link>
                     </div>
                 </div>
             )}

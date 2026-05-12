@@ -29,14 +29,31 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
   font-size: 16px;
+}
+
+body > * {
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 a,
@@ -55,6 +72,9 @@ button {
   padding: 0.875rem 1.35rem;
   font-weight: 800;
   line-height: 1;
+  min-height: 2.75rem;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-amber:hover {
@@ -72,6 +92,9 @@ button {
   padding: 0.875rem 1.35rem;
   font-weight: 800;
   line-height: 1;
+  min-height: 2.75rem;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-outline-white:hover {
@@ -89,6 +112,9 @@ button {
   padding: 0.875rem 1.35rem;
   font-weight: 800;
   line-height: 1;
+  min-height: 2.75rem;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-outline-amber:hover {
@@ -122,4 +148,17 @@ button {
 
 .line-clamp-3 {
   -webkit-line-clamp: 3;
+}
+
+@media (max-width: 640px) {
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  .btn-amber,
+  .btn-outline-white,
+  .btn-outline-amber {
+    width: 100%;
+    justify-content: center;
+  }
 }

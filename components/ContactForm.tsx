@@ -28,8 +28,8 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="rounded-lg bg-white p-6 shadow-lg md:p-8" noValidate>
-            <h2 className="text-2xl font-bold text-primary">Get in Touch With Us</h2>
+        <form onSubmit={handleSubmit} className="min-w-0 rounded-lg bg-white p-5 shadow-lg sm:p-6 md:p-8" noValidate>
+            <h2 className="text-xl font-bold text-primary sm:text-2xl">Get in Touch With Us</h2>
             <p className="mt-2 text-sm leading-6 text-muted">
                 Looking to explore our product range? Fill out the form below and our team will get back to you.
             </p>

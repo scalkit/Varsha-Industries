@@ -13,7 +13,7 @@ export default function ContactPage() {
                         <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber">
                             CONTACT
                         </p>
-                        <h2 className="mt-3 text-3xl font-bold text-primary">Get in Touch</h2>
+                        <h2 className="mt-3 text-2xl font-bold text-primary sm:text-3xl">Get in Touch</h2>
                         <p className="mt-4 text-muted">We&apos;re here to help you find the right equipment.</p>
 
                         <div className="mt-8 space-y-6">
@@ -69,11 +69,11 @@ function Info({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex gap-4 rounded-lg bg-white p-5 shadow-sm">
+        <div className="flex min-w-0 gap-4 rounded-lg bg-white p-5 shadow-sm">
             <Icon className="mt-1 h-6 w-6 flex-shrink-0 text-amber" />
-            <div>
+            <div className="min-w-0">
                 <h3 className="font-bold text-primary">{title}</h3>
-                <div className="mt-2 text-sm leading-6 text-muted">{children}</div>
+                <div className="mt-2 break-words text-sm leading-6 text-muted">{children}</div>
             </div>
         </div>
     );

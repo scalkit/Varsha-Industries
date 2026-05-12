@@ -5,8 +5,8 @@ export default function ContactCTA() {
     return (
         <section className="bg-primary py-16 text-white">
             <div className="mx-auto flex max-w-screen-xl flex-col items-start justify-between gap-8 px-4 sm:px-6 md:flex-row md:items-center lg:px-8">
-                <div>
-                    <h2 className="text-3xl font-bold md:text-4xl">
+                <div className="max-w-3xl">
+                    <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
                         Ready to Upgrade Your Oil Processing Plant?
                     </h2>
                     <p className="mt-4 max-w-2xl text-white/75">
@@ -17,7 +17,7 @@ export default function ContactCTA() {
                     <Link href="/contact" className="btn-amber justify-center">
                         Contact Us
                     </Link>
-                    <a href="tel:+919811965771" className="btn-outline-white justify-center">
+                    <a href="tel:+919811965771" className="btn-outline-white justify-center whitespace-nowrap">
                         <Phone className="h-4 w-4" />
                         +91 9811965771
                     </a>
