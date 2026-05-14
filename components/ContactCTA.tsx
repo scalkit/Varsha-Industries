@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ContactCTA() {
     return (
-        <section className="bg-[#123946] py-16 text-white md:py-20">
+        <section className="bg-primary py-16 text-white md:py-20">
             <div className="mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
                 <div>
                     <h2 className="text-3xl font-bold leading-tight md:text-4xl">
@@ -13,10 +13,10 @@ export default function ContactCTA() {
                     </p>
                 </div>
                 <div className="mt-8 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-                    <Link href="/contact" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-amber hover:bg-amber">
+                    <Link href="/contact" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
                         Contact Us
                     </Link>
-                    <Link href="/products" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-amber hover:bg-amber">
+                    <Link href="/products" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
                         Explore Products
                     </Link>
                 </div>

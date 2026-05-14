@@ -25,7 +25,7 @@ export default function Home() {
                                 <p key={paragraph}>{paragraph}</p>
                             ))}
                         </div>
-                        <Link href="/about" className="group mt-8 inline-flex w-fit items-center gap-2 self-start rounded-lg border border-amber px-5 py-3 font-extrabold leading-none text-amber transition duration-300 hover:-translate-y-1 hover:bg-amber hover:text-white hover:shadow-lg">
+                        <Link href="/about" className="group mt-8 inline-flex w-fit items-center gap-2 self-start rounded-lg border border-primary px-5 py-3 font-extrabold leading-none text-primary transition duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white hover:shadow-lg">
                             Learn More About Us
                             <ArrowRight className="h-4 w-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                         </Link>
@@ -64,7 +64,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="mt-12 text-center">
-                        <Link href="/products" className="btn-amber">
+                        <Link href="/products" className="btn-solid-primary">
                             View All Products
                         </Link>
                     </div>
@@ -82,7 +82,7 @@ export default function Home() {
 
             <section className="py-16 md:py-24">
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                    <div className="border-l-4 border-amber/35 pl-5">
+                    <div className="border-l-4 border-primary/35 pl-5">
                         <h2 className="text-2xl font-black text-primary sm:text-3xl">Latest Insights</h2>
                     </div>
                     <div className="mt-12 grid gap-7 md:grid-cols-3">
@@ -91,7 +91,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="mt-12 text-center">
-                        <Link href="/insights" className="btn-outline-amber">
+                        <Link href="/insights" className="btn-outline-primary">
                             View All Insights
                         </Link>
                     </div>

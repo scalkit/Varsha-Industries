@@ -16,11 +16,11 @@ export default function ResourcesPage() {
                     />
                     <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {resources.map((resource) => (
-                            <div key={resource.title} className="rounded-lg border border-black/10 bg-white p-6 shadow-sm">
-                                <FileText className="h-10 w-10 text-amber" />
+                            <div key={resource.title} className="rounded-lg border border-primary/10 bg-white p-6 shadow-sm">
+                                <FileText className="h-10 w-10 text-primary" />
                                 <h3 className="mt-5 text-xl font-bold text-primary">{resource.title}</h3>
                                 <p className="mt-3 min-h-24 text-sm leading-6 text-muted">{resource.description}</p>
-                                <button type="button" className="btn-amber mt-5 w-full justify-center" disabled>
+                                <button type="button" className="btn-solid-primary mt-5 w-full justify-center" disabled>
                                     <Download className="h-4 w-4" />
                                     Download
                                 </button>

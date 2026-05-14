@@ -14,7 +14,7 @@ export default function ProductCard({ title, description, href = "/products", ic
     return (
         <Link
             href={href}
-            className="group flex h-full min-w-0 flex-col rounded-lg border border-black/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-t-4 hover:border-t-amber hover:shadow-xl sm:p-6"
+            className="group flex h-full min-w-0 flex-col rounded-lg border border-primary/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-t-4 hover:border-t-primary hover:shadow-xl sm:p-6"
         >
             <div className="relative mb-5 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-neutral">
                 {image ? (
@@ -26,12 +26,12 @@ export default function ProductCard({ title, description, href = "/products", ic
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                 ) : (
-                    <Icon className="h-16 w-16 text-primary transition group-hover:text-amber" />
+                    <Icon className="h-16 w-16 text-primary transition group-hover:text-primary/70" />
                 )}
             </div>
             <h3 className="text-lg font-bold text-primary sm:text-xl">{title}</h3>
             <p className="mt-3 flex-grow text-sm leading-6 text-muted">{description}</p>
-            <span className="mt-5 inline-flex font-bold text-amber">View Products -&gt;</span>
+            <span className="mt-5 inline-flex font-bold text-primary">View Products -&gt;</span>
         </Link>
     );
 }

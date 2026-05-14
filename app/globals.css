@@ -1,13 +1,13 @@
 @import "../node_modules/tailwindcss/index.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
-  --primary: #0d2b36;
-  --amber: #c8922a;
-  --muted: #666666;
-  --neutral: #f5f5f5;
-  --soft: #f9f9f9;
+  --background: #f8f6e8;
+  --foreground: #1a312a;
+  --primary: #1a312a;
+  --accent: #f8f6e8;
+  --muted: #52635d;
+  --neutral: #f1efe0;
+  --soft: #f8f6e8;
   --font-heading: Arial, Helvetica, sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
 }
@@ -16,7 +16,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-amber: var(--amber);
+  --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-neutral: var(--neutral);
   --color-soft: var(--soft);
@@ -62,12 +62,36 @@ button {
     transform 180ms ease, box-shadow 180ms ease;
 }
 
-.btn-amber {
+.btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  background: var(--amber);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--primary);
+  box-shadow: 0 18px 36px rgba(10, 31, 25, 0.2);
+  padding: 0.875rem 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+  min-height: 2.75rem;
+  text-align: center;
+  white-space: normal;
+}
+
+.btn-primary:hover {
+  background: white;
+  border-color: white;
+  transform: translateY(-1px);
+}
+
+.btn-solid-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--primary);
+  border: 1px solid var(--primary);
   color: white;
   padding: 0.875rem 1.35rem;
   font-weight: 800;
@@ -77,8 +101,9 @@ button {
   white-space: normal;
 }
 
-.btn-amber:hover {
-  background: #b17d1e;
+.btn-solid-primary:hover {
+  background: #25483d;
+  border-color: #25483d;
   transform: translateY(-1px);
 }
 
@@ -98,17 +123,18 @@ button {
 }
 
 .btn-outline-white:hover {
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--primary);
 }
 
-.btn-outline-amber {
+.btn-outline-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--amber);
-  color: var(--amber);
+  border: 1px solid var(--primary);
+  color: var(--primary);
   padding: 0.875rem 1.35rem;
   font-weight: 800;
   line-height: 1;
@@ -117,8 +143,8 @@ button {
   white-space: normal;
 }
 
-.btn-outline-amber:hover {
-  background: var(--amber);
+.btn-outline-primary:hover {
+  background: var(--primary);
   color: white;
 }
 
@@ -163,9 +189,10 @@ button {
     scroll-margin-top: 5rem;
   }
 
-  .btn-amber,
+  .btn-primary,
+  .btn-solid-primary,
   .btn-outline-white,
-  .btn-outline-amber {
+  .btn-outline-primary {
     width: 100%;
     justify-content: center;
   }

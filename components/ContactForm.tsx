@@ -31,7 +31,7 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="min-w-0 rounded-xl border border-black/10 bg-white p-5 shadow-sm sm:p-6 md:p-8"
+            className="min-w-0 rounded-xl border border-primary/10 bg-white p-5 shadow-sm sm:p-6 md:p-8"
             noValidate
         >
             <h2 className="text-2xl font-bold leading-tight text-primary sm:text-3xl">Get in Touch With Us</h2>
@@ -54,12 +54,12 @@ export default function ContactForm() {
                         name="message"
                         rows={6}
                         placeholder="Let us know your requirements, output expectations, or any queries you may have."
-                        className="mt-2 w-full rounded-lg border border-black/15 px-4 py-3 leading-7 outline-none transition placeholder:text-muted/60 focus:border-amber"
+                        className="mt-2 w-full rounded-lg border border-primary/15 px-4 py-3 leading-7 outline-none transition placeholder:text-muted/60 focus:border-primary"
                     />
                 </div>
                 <button
                     type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center gap-3 rounded-lg bg-primary px-6 py-4 font-bold text-white shadow-lg shadow-primary/15 transition hover:-translate-y-1 hover:bg-amber"
+                    className="mt-2 inline-flex w-full items-center justify-center gap-3 rounded-lg bg-primary px-6 py-4 font-bold text-white shadow-lg shadow-primary/15 transition hover:-translate-y-1 hover:bg-primary/85"
                 >
                     Submit Enquiry
                     <Send className="h-5 w-5" />
@@ -97,7 +97,7 @@ function Field({
                 id={name}
                 name={name}
                 placeholder={placeholder}
-                className="mt-2 w-full rounded-lg border border-black/15 px-4 py-3 outline-none transition placeholder:text-muted/60 focus:border-amber"
+                className="mt-2 w-full rounded-lg border border-primary/15 px-4 py-3 outline-none transition placeholder:text-muted/60 focus:border-primary"
             />
             {error && <p className="mt-1 text-xs font-bold text-red-600">{error}</p>}
         </div>

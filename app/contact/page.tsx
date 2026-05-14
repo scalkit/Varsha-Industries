@@ -7,7 +7,7 @@ export default function ContactPage() {
         <>
             <section className="bg-primary px-4 py-16 text-center text-white sm:px-6 md:py-20 lg:px-8">
                 <div className="mx-auto max-w-3xl">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber">CONTACT</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent">CONTACT</p>
                     <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Contact Us</h1>
                     <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/75">
                         Have a product enquiry or custom manufacturing request? We are here to help.
@@ -25,13 +25,13 @@ export default function ContactPage() {
 
                         <div className="mt-9 space-y-9">
                             <Info icon={Mail} title="Email">
-                                <a href={`mailto:${brand.email}`} className="hover:text-amber">
+                                <a href={`mailto:${brand.email}`} className="hover:text-primary/75">
                                     {brand.email}
                                 </a>
                             </Info>
                             <Info icon={Phone} title="Phone">
                                 {brand.phones.map((phone) => (
-                                    <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="block hover:text-amber">
+                                    <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="block hover:text-primary/75">
                                         {phone}
                                     </a>
                                 ))}
@@ -70,7 +70,7 @@ function Info({
 }) {
     return (
         <div className="flex min-w-0 gap-5">
-            <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-amber/10 text-amber">
+            <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <Icon className="h-6 w-6" />
             </span>
             <div className="min-w-0">

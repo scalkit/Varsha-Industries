@@ -22,10 +22,10 @@ export default async function BlogPostPage({
         <>
             <section className="bg-primary pt-32 pb-20 text-white">
                 <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-                    <Link href="/insights" className="font-bold text-amber">
+                    <Link href="/insights" className="font-bold text-accent">
                         Back to Insights
                     </Link>
-                    <p className="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-amber">
+                    <p className="mt-8 text-xs font-bold uppercase tracking-[0.22em] text-accent">
                         {post.category}
                     </p>
                     <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">

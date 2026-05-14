@@ -20,7 +20,7 @@ export default function FAQAccordion() {
                             aria-expanded={isOpen}
                         >
                             <span className="text-base font-bold leading-snug text-primary">{faq.question}</span>
-                            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-white transition duration-300 group-hover:bg-amber">
+                            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-white transition duration-300 group-hover:bg-primary/85">
                                 <Plus className={`h-5 w-5 transition duration-300 ${isOpen ? "rotate-45" : ""}`} />
                             </span>
                         </button>

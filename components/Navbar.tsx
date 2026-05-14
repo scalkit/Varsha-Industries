@@ -25,7 +25,7 @@ export default function Navbar() {
             <div className="mx-auto w-full max-w-screen-xl px-3 sm:px-6 lg:px-8">
                 <div className="flex h-20 min-w-0 items-center justify-between gap-2 sm:gap-4">
                     <Link href="/" className="flex min-w-0 items-center gap-2 font-black tracking-wide sm:gap-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-amber/60 text-amber">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/70 text-accent">
                             <Cog className="h-5 w-5" />
                         </span>
                         <span className="flex min-w-0 flex-col text-[13px] leading-none sm:text-base md:text-lg">
@@ -39,7 +39,7 @@ export default function Navbar() {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`text-sm font-bold ${isActive(href) ? "text-amber underline underline-offset-8" : "text-white hover:text-amber"}`}
+                                className={`text-sm font-bold ${isActive(href) ? "text-accent underline underline-offset-8" : "text-white hover:text-accent"}`}
                             >
                                 {label}
                             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
                                 key={href}
                                 href={href}
                                 onClick={() => setIsOpen(false)}
-                                className={`rounded-md px-3 py-3 font-bold ${isActive(href) ? "bg-white/10 text-amber" : "text-white hover:bg-white/10 hover:text-amber"}`}
+                                className={`rounded-md px-3 py-3 font-bold ${isActive(href) ? "bg-white/10 text-accent" : "text-white hover:bg-white/10 hover:text-accent"}`}
                             >
                                 {label}
                             </Link>

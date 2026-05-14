@@ -30,7 +30,7 @@ export default function HeroBanner() {
             ))}
             <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] w-full max-w-screen-xl items-center overflow-hidden px-3 py-14 sm:min-h-[calc(100svh-96px)] sm:px-6 sm:py-20 lg:px-8">
                 <div className="w-full min-w-0 max-w-2xl md:w-1/2 lg:w-2/5">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber sm:text-xs sm:tracking-[0.24em]">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent sm:text-xs sm:tracking-[0.24em]">
                         {heroSlides[active].eyebrow}
                     </p>
                     <h1 className="mt-5 max-w-full break-words text-[clamp(2.15rem,10.5vw,4.5rem)] font-bold leading-[1.12] sm:text-5xl lg:text-6xl">
@@ -40,7 +40,7 @@ export default function HeroBanner() {
                         {heroSlides[active].description}
                     </p>
                     <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                        <Link href="/products" className="btn-amber justify-center">
+                        <Link href="/products" className="btn-primary justify-center">
                             Explore Products
                         </Link>
                         <Link href="/contact" className="btn-outline-white justify-center">
@@ -56,7 +56,7 @@ export default function HeroBanner() {
                         type="button"
                         aria-label={`Show slide ${index + 1}`}
                         onClick={() => setActive(index)}
-                        className={`h-3 w-3 rounded-full transition ${index === active ? "bg-amber" : "bg-white/40"}`}
+                        className={`h-3 w-3 rounded-full transition ${index === active ? "bg-accent" : "bg-white/40"}`}
                     />
                 ))}
             </div>

@@ -37,7 +37,7 @@ export default function AboutPage() {
                             const Icon = value.icon;
                             return (
                                 <div key={value.title} className="rounded-lg bg-white p-6 shadow-sm">
-                                    <Icon className="h-10 w-10 text-amber" />
+                                    <Icon className="h-10 w-10 text-primary" />
                                     <h3 className="mt-5 text-xl font-bold text-primary">{value.title}</h3>
                                     <p className="mt-3 text-sm leading-6 text-muted">{value.description}</p>
                                 </div>
@@ -52,12 +52,12 @@ export default function AboutPage() {
                     <SectionHeader eyebrow="LEADERSHIP" title="Meet Our Founders" />
                     <div className="mx-auto mt-12 grid max-w-3xl gap-6">
                         {founderProfiles.map((founder) => (
-                            <div key={founder.name} className="rounded-lg border border-black/10 bg-white p-8 text-center shadow-sm">
+                            <div key={founder.name} className="rounded-lg border border-primary/10 bg-white p-8 text-center shadow-sm">
                                 <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-neutral text-4xl font-black text-primary">
                                     VI
                                 </div>
                                 <h3 className="mt-6 text-2xl font-bold text-primary">{founder.name}</h3>
-                                <p className="mt-1 font-bold text-amber">{founder.role}</p>
+                                <p className="mt-1 font-bold text-primary/75">{founder.role}</p>
                                 <p className="mt-4 leading-7 text-muted">{founder.bio}</p>
                             </div>
                         ))}

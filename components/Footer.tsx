@@ -13,7 +13,7 @@ export default function Footer() {
                         <p className="mt-4 leading-7 text-white/70">
                             Leading Manufacturer of Oil Processing Equipment
                         </p>
-                        <p className="mt-3 text-sm font-bold text-amber">Established 2018</p>
+                        <p className="mt-3 text-sm font-bold text-accent">Established 2018</p>
                     </div>
                     <FooterColumn
                         title="Quick Links"
@@ -36,14 +36,14 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-5 text-lg font-bold text-white">Contact</h3>
                         <div className="space-y-3 text-sm leading-6 text-white/70">
-                            <a href={`mailto:${brand.email}`} className="block hover:text-amber">
+                            <a href={`mailto:${brand.email}`} className="block hover:text-accent">
                                 {brand.email}
                             </a>
                             {brand.phones.map((phone) => (
                                 <a
                                     key={phone}
                                     href={`tel:${phone.replace(/\s/g, "")}`}
-                                    className="block hover:text-amber"
+                                    className="block hover:text-accent"
                                 >
                                     {phone}
                                 </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                             href="https://outlierlabs.in/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-bold text-white/75 transition hover:text-amber"
+                            className="font-bold text-white/75 transition hover:text-accent"
                         >
                             Outlier Labs
                         </a>
@@ -84,7 +84,7 @@ function FooterColumn({
             <ul className="space-y-3 text-sm text-white/70">
                 {links.map(([label, href]) => (
                     <li key={label}>
-                        <Link href={href} className="hover:text-amber">
+                        <Link href={href} className="hover:text-accent">
                             {label}
                         </Link>
                     </li>
