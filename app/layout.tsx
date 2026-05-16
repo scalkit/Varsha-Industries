@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body
         className="flex min-h-screen flex-col bg-background text-foreground antialiased"
       >
+        <ScrollReveal />
         <Navbar />
         <main className="flex-grow">
           {children}

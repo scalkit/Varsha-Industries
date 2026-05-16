@@ -62,6 +62,26 @@ button {
     transform 180ms ease, box-shadow 180ms ease;
 }
 
+.reveal-ready .reveal-target {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal-target.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .reveal-target {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;

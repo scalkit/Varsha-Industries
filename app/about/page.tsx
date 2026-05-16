@@ -6,7 +6,10 @@ import { aboutParagraphs, founderProfiles, values } from "@/lib/site-data";
 export default function AboutPage() {
     return (
         <>
-            <InnerHero title="About Us" />
+            <InnerHero
+                title="About Us"
+                subtitle="Built on practical engineering, transparent dealing and dependable support for oil processing plants."
+            />
             <section className="py-16 md:py-24">
                 <div className="mx-auto grid max-w-screen-xl items-center gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-8">
                     <div>
