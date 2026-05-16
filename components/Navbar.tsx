@@ -39,7 +39,7 @@ export default function Navbar() {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`text-sm font-bold ${isActive(href) ? "text-accent underline underline-offset-8" : "text-white hover:text-accent"}`}
+                                className={`relative py-2 text-sm font-bold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:bg-accent after:transition-transform after:duration-300 hover:text-accent hover:after:scale-x-100 ${isActive(href) ? "text-accent after:scale-x-100" : "text-white after:scale-x-0"}`}
                             >
                                 {label}
                             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
                                 key={href}
                                 href={href}
                                 onClick={() => setIsOpen(false)}
-                                className={`rounded-md px-3 py-3 font-bold ${isActive(href) ? "bg-white/10 text-accent" : "text-white hover:bg-white/10 hover:text-accent"}`}
+                                className={`relative rounded-md px-3 py-3 font-bold after:absolute after:bottom-2 after:left-3 after:h-0.5 after:w-[calc(100%-1.5rem)] after:origin-left after:bg-accent after:transition-transform after:duration-300 hover:bg-white/10 hover:text-accent hover:after:scale-x-100 ${isActive(href) ? "bg-white/10 text-accent after:scale-x-100" : "text-white after:scale-x-0"}`}
                             >
                                 {label}
                             </Link>
