@@ -99,7 +99,7 @@ export default function Home() {
             </section>
 
             <section className="relative overflow-hidden bg-soft py-16 md:py-24">
-                <div className="mx-auto max-w-5xl border-x border-primary/10 bg-white px-4 py-8 sm:px-8 md:py-12 lg:px-16">
+                <div className="mx-auto max-w-5xl rounded-xl border-x border-primary/10 bg-white px-4 py-8 sm:px-8 md:py-12 lg:px-16">
                     <span className="inline-flex rounded-full bg-neutral px-6 py-2 text-sm font-bold text-muted">
                         FAQs
                     </span>
