@@ -8,8 +8,8 @@
   --muted: #52635d;
   --neutral: #eceaea;
   --soft: #f6f5f5;
-  --font-heading: Arial, Helvetica, sans-serif;
-  --font-body: Arial, Helvetica, sans-serif;
+  --font-heading: Lustria, "Lustria Fallback", Georgia, serif;
+  --font-body: Lato, "Lato Fallback", Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -42,14 +42,38 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+  font-weight: 400;
   font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400 !important;
+}
+
+p,
+li,
+span,
+a,
+button,
+label,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
 }
 
 code,
 pre,
 kbd,
 samp {
-  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
 }
 
 body > * {
@@ -99,7 +123,8 @@ button {
   color: var(--primary);
   box-shadow: 0 18px 36px rgba(10, 31, 25, 0.2);
   padding: 0.875rem 1.35rem;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   line-height: 1;
   min-height: 2.75rem;
   text-align: center;
@@ -121,7 +146,8 @@ button {
   border: 1px solid var(--primary);
   color: white;
   padding: 0.875rem 1.35rem;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   line-height: 1;
   min-height: 2.75rem;
   text-align: center;
@@ -142,7 +168,8 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.75);
   color: white;
   padding: 0.875rem 1.35rem;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   line-height: 1;
   min-height: 2.75rem;
   text-align: center;
@@ -163,7 +190,8 @@ button {
   border: 1px solid var(--primary);
   color: var(--primary);
   padding: 0.875rem 1.35rem;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   line-height: 1;
   min-height: 2.75rem;
   text-align: center;

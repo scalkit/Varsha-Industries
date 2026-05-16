@@ -16,7 +16,7 @@ export default function InnerHero({ title, subtitle }: InnerHeroProps) {
                     <span className="mx-2">/</span>
                     <span className="text-accent">{title}</span>
                 </div>
-                <h1 className="mt-6 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{title}</h1>
+                <h1 className="mt-6 text-3xl leading-tight sm:text-4xl md:text-5xl">{title}</h1>
                 {subtitle && <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">{subtitle}</p>}
             </div>
         </section>

@@ -31,7 +31,7 @@ export default function ProductCard({ title, description, href = "/products", ic
             </div>
             <h3 className="text-lg font-bold text-primary sm:text-xl">{title}</h3>
             <p className="mt-3 flex-grow text-sm leading-6 text-muted">{description}</p>
-            <span className="mt-5 inline-flex font-bold text-primary">View Products -&gt;</span>
+            <span className="mt-5 inline-flex font-normal text-primary">View Products -&gt;</span>
         </Link>
     );
 }

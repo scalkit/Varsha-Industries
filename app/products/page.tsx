@@ -31,7 +31,7 @@ export default function ProductsPage() {
                                     key={category.id}
                                     type="button"
                                     onClick={() => setActiveId(category.id)}
-                                    className={`min-w-max rounded-md px-3 py-2.5 text-left text-sm font-bold lg:w-full lg:min-w-0 ${activeId === category.id ? "bg-primary text-white" : "text-primary hover:bg-neutral"}`}
+                                    className={`min-w-max rounded-md px-3 py-2.5 text-left text-sm font-normal lg:w-full lg:min-w-0 ${activeId === category.id ? "bg-primary text-white" : "text-primary hover:bg-neutral"}`}
                                 >
                                     {category.shortTitle}
                                 </button>

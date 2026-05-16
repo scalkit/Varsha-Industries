@@ -7,13 +7,12 @@ export default function Footer() {
             <div className="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
                 <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                     <div>
-                        <Link href="/" className="text-2xl font-black tracking-wide text-white">
+                        <Link href="/" className="font-heading text-2xl tracking-wide text-white">
                             {brand.displayName}
                         </Link>
                         <p className="mt-4 leading-7 text-white/70">
                             Leading Manufacturer of Oil Processing Equipment
                         </p>
-                        <p className="mt-3 text-sm font-bold text-accent">Established 2018</p>
                     </div>
                     <FooterColumn
                         title="Quick Links"
@@ -34,7 +33,7 @@ export default function Footer() {
                         ])}
                     />
                     <div>
-                        <h3 className="mb-5 text-lg font-bold text-white">Contact</h3>
+                        <h3 className="mb-5 text-lg text-white">Contact</h3>
                         <div className="space-y-3 text-sm leading-6 text-white/70">
                             <a href={`mailto:${brand.email}`} className="block hover:text-accent">
                                 {brand.email}
@@ -60,7 +59,7 @@ export default function Footer() {
                             href="https://outlierlabs.in/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-bold text-white/75 transition hover:text-accent"
+                            className="font-normal text-white/75 transition hover:text-accent"
                         >
                             Outlier Labs
                         </a>
@@ -80,7 +79,7 @@ function FooterColumn({
 }) {
     return (
         <div>
-            <h3 className="mb-5 text-lg font-bold text-white">{title}</h3>
+            <h3 className="mb-5 text-lg text-white">{title}</h3>
             <ul className="space-y-3 text-sm text-white/70">
                 {links.map(([label, href]) => (
                     <li key={label}>

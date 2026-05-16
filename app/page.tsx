@@ -18,7 +18,7 @@ export default function Home() {
 
             <section className="overflow-hidden bg-background py-8 md:py-10">
                 <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-6 lg:px-8">
-                    <p className="text-sm font-bold text-muted">Trusted by industry leaders</p>
+                    <p className="text-sm font-normal text-muted">Trusted by industry leaders</p>
                     <div className="mt-6">
                         <ClientLogoStrip />
                     </div>
@@ -34,7 +34,7 @@ export default function Home() {
                                 <p key={paragraph}>{paragraph}</p>
                             ))}
                         </div>
-                        <Link href="/about" className="group mt-8 inline-flex w-fit items-center gap-2 self-start rounded-lg border border-primary px-5 py-3 font-extrabold leading-none text-primary transition duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white hover:shadow-lg">
+                        <Link href="/about" className="group mt-8 inline-flex w-fit items-center gap-2 self-start rounded-lg border border-primary px-5 py-3 font-normal leading-none text-primary transition duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white hover:shadow-lg">
                             Learn More About Us
                             <ArrowRight className="h-4 w-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
                         </Link>
@@ -100,7 +100,7 @@ export default function Home() {
 
             <section className="relative overflow-hidden bg-soft py-16 md:py-24">
                 <div className="mx-auto max-w-5xl rounded-xl border-x border-primary/10 bg-white px-4 py-8 sm:px-8 md:py-12 lg:px-16">
-                    <span className="inline-flex rounded-full bg-neutral px-6 py-2 text-sm font-bold text-muted">
+                    <span className="inline-flex rounded-full bg-neutral px-6 py-2 text-sm font-normal text-muted">
                         FAQs
                     </span>
                     <h2 className="mt-8 max-w-4xl text-3xl font-bold leading-tight text-primary md:text-4xl">

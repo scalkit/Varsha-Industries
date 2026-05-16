@@ -13,10 +13,10 @@ export default function ContactCTA() {
                     </p>
                 </div>
                 <div className="mt-8 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-                    <Link href="/contact" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
+                    <Link href="/contact" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-normal text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
                         Contact Us
                     </Link>
-                    <Link href="/products" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
+                    <Link href="/products" className="min-w-44 rounded-md border border-white bg-transparent px-6 py-3 text-center font-normal text-white transition hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-primary">
                         Explore Products
                     </Link>
                 </div>
