@@ -16,16 +16,16 @@ export default function Home() {
         <>
             <HeroBanner />
 
-            <section className="overflow-hidden bg-background py-16 md:py-24">
+            <section className="overflow-hidden bg-background py-8 md:py-10">
                 <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-6 lg:px-8">
                     <p className="text-sm font-bold text-muted">Trusted by industry leaders</p>
-                    <div className="mt-12">
+                    <div className="mt-6">
                         <ClientLogoStrip />
                     </div>
                 </div>
             </section>
 
-            <section className="py-16 md:py-24">
+            <section className="py-10 md:py-16">
                 <div className="mx-auto grid max-w-screen-xl items-stretch gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-8">
                     <div className="flex flex-col md:order-1">
                         <SectionHeader eyebrow="WHO WE ARE" title="About Varsha Industry" centered={false} />
