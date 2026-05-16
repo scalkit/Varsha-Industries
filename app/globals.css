@@ -45,6 +45,13 @@ body {
   font-size: 16px;
 }
 
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+
 body > * {
   max-width: 100%;
 }

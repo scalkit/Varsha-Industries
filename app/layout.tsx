@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Varsha Industry | Oil Expeller & Filter Press Machines",
   description:
     "Varsha Industry is a Ghaziabad based manufacturer and trader of oil expeller machines, filter press machines, industrial filter cloth and spare parts.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+  },
 };
 
 import Navbar from "@/components/Navbar";
