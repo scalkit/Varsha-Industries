@@ -16,6 +16,15 @@ export default function Home() {
         <>
             <HeroBanner />
 
+            <section className="overflow-hidden bg-background py-16 md:py-24">
+                <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-6 lg:px-8">
+                    <p className="text-sm font-bold text-muted">Trusted by industry leaders</p>
+                    <div className="mt-12">
+                        <ClientLogoStrip />
+                    </div>
+                </div>
+            </section>
+
             <section className="py-16 md:py-24">
                 <div className="mx-auto grid max-w-screen-xl items-stretch gap-12 px-4 sm:px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-8">
                     <div className="flex flex-col md:order-1">
@@ -67,15 +76,6 @@ export default function Home() {
                         <Link href="/products" className="btn-solid-primary">
                             View All Products
                         </Link>
-                    </div>
-                </div>
-            </section>
-
-            <section className="overflow-hidden bg-primary py-16 text-white md:py-24">
-                <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-6 lg:px-8">
-                    <p className="text-sm font-bold text-white/55">Trusted by industry leaders</p>
-                    <div className="mt-12">
-                        <ClientLogoStrip />
                     </div>
                 </div>
             </section>

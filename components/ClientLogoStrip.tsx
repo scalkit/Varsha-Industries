@@ -36,7 +36,7 @@ function ClientLogoCard({
                     onError={() => setFailed(true)}
                 />
             ) : (
-                <span className="text-center text-2xl font-black tracking-tight text-white sm:text-3xl">
+                <span className="text-center text-2xl font-black tracking-tight text-primary sm:text-3xl">
                     {client.name}
                 </span>
             )}
