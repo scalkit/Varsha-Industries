@@ -22,21 +22,21 @@ export default function HeroBanner() {
                     className={`absolute inset-0 transition-opacity duration-700 ${index === active ? "opacity-100" : "opacity-0"}`}
                 >
                     <div
-                        className="absolute inset-0 w-full bg-cover bg-center opacity-70 sm:opacity-80 md:left-auto md:w-3/5"
+                        className="absolute inset-0 w-full bg-cover bg-center opacity-100 md:left-1/2 md:w-1/2"
                         style={{ backgroundImage: `url(${slide.image})` }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/72 to-primary/24" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/82 to-primary/32 md:right-1/2 md:to-primary" />
                 </div>
             ))}
             <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] w-full max-w-screen-xl items-center overflow-hidden px-3 py-14 sm:min-h-[calc(100svh-96px)] sm:px-6 sm:py-20 lg:px-8">
-                <div className="w-full min-w-0 max-w-2xl md:w-1/2 lg:w-2/5">
+                <div className="w-full min-w-0 max-w-2xl md:w-1/2 md:pr-10 lg:max-w-xl lg:pr-16">
                     <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent sm:text-xs sm:tracking-[0.24em]">
                         {heroSlides[active].eyebrow}
                     </p>
-                    <h1 className="mt-5 max-w-full break-words text-[clamp(2.15rem,10.5vw,4.5rem)] font-bold leading-[1.12] sm:text-5xl lg:text-6xl">
+                    <h1 className="mt-5 max-w-full break-words text-[clamp(2.15rem,10.5vw,4rem)] font-bold leading-[1.12] sm:text-5xl lg:text-[3.75rem]">
                         {heroSlides[active].title}
                     </h1>
-                    <p className="mt-6 max-w-xl break-words text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
+                    <p className="mt-6 max-w-lg break-words text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
                         {heroSlides[active].description}
                     </p>
                     <div className="mt-9 flex flex-col gap-4 sm:flex-row">

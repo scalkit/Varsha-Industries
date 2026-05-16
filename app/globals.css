@@ -1,13 +1,13 @@
 @import "../node_modules/tailwindcss/index.css";
 
 :root {
-  --background: #f8f6e8;
-  --foreground: #1a312a;
-  --primary: #1a312a;
-  --accent: #f8f6e8;
+  --background: #f6f5f5;
+  --foreground: #0e3739;
+  --primary: #0e3739;
+  --accent: #f6f5f5;
   --muted: #52635d;
-  --neutral: #f1efe0;
-  --soft: #f8f6e8;
+  --neutral: #eceaea;
+  --soft: #f6f5f5;
   --font-heading: Arial, Helvetica, sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
 }
@@ -102,8 +102,8 @@ button {
 }
 
 .btn-solid-primary:hover {
-  background: #25483d;
-  border-color: #25483d;
+  background: #174b4e;
+  border-color: #174b4e;
   transform: translateY(-1px);
 }
 

@@ -104,7 +104,7 @@ export default function Home() {
                         FAQs
                     </span>
                     <h2 className="mt-8 max-w-4xl text-3xl font-bold leading-tight text-primary md:text-4xl">
-                        Everything You Need to <span className="font-serif italic font-medium">Know</span>
+                        Everything You Need to <span className="font-medium">Know</span>
                     </h2>
                     <div className="mt-10">
                         <FAQAccordion />
